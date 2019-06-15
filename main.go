@@ -12,7 +12,7 @@ import (
 func masked(sql *C.char) *C.char {
 	result, err := mask.Mask(C.GoString(sql))
 	if err != nil {
-		result = "[ parse error. masked whole sql. ]"
+		result = ""
 	}
 	return C.CString(result)
 }

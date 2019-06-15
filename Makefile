@@ -1,6 +1,9 @@
 sql-mask: main.go parser/mysql_lexer.go parser/mysql_parser.go antlr-utils/case_changing_stream.go
 	go build -o $@ $<
 
+libsql_mask.%: main.go parser/mysql_lexer.go parser/mysql_parser.go antlr-utils/case_changing_stream.go
+	CGO_ENABLED=1 GOOS=`tr -d . <<< $(suffix $@)` go build -ldflags="-w -s" -buildmode=c-shared -o $@
+
 parser/mysql_lexer.go parser/mysql_parser.go: parser/antlr.jar parser/MySqlLexer.g4 parser/MySqlParser.g4
 	java -jar $< -Dlanguage=Go $(@D)/*.g4
 

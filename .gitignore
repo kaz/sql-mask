@@ -2,4 +2,6 @@ parser/*
 !parser/*.patch
 antlr-utils/*
 !antlr-utils/*.patch
+
 sql-mask
+libsql_mask.*
