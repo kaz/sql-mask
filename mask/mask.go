@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
+	utils "github.com/antlr/antlr4/doc/resources"
 	"github.com/antlr/antlr4/runtime/Go/antlr"
 
-	utils "github.com/kaz/sql-mask/antlr-utils"
 	"github.com/kaz/sql-mask/parser"
 )
 

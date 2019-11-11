@@ -1,5 +1,5 @@
 module github.com/kaz/sql-mask
 
-go 1.12
+go 1.13
 
-require github.com/antlr/antlr4 v0.0.0-20190518164840-edae2a1c9b4b
+require github.com/antlr/antlr4 v0.0.0-20191031194250-3fcb6da1f690
